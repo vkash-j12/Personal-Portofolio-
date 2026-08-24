@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio Page</title>
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">My Portfolio</a>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#skills">My Skills</a>
+            <a href="#education">My Education</a>
+            <a href="#experience">My Experience</a>
+            <a href="#contact">Contact Details</a>
+        </nav>
+    </header>
+
+
+    <section id="home" class="home">
+        <div class="home-container">
+            <div class="profimage">
+                <img src="images/profimage.jpg" alt="Ashton">
+            </div>
+            <div class="home-content">
+                <h1>Welcome to my Portfolio! I'm <span>Ashton</span></h1>
+                <h3 class="typing-text">I'm a <span></span></h3>
+                <p>Detail oriented IT graduate skilled in web & mobile development, software testing, and systems integration. Seeking to leverage hands on project experience to deliver clean, test driven code and streamline business processes for a forward thinking technology team.</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/ashton-villena-3b173939a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/vkash-j12" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="section-container">
+            <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React JS</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Development</h3>
+                    <p>Dart & Flutter</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-gear"></i>
+                    <h3>QA Software Testing</h3>
+                    <p>Smoke Testing, UAT, Grafana K6, Lighthouse Testing, Performance Testing</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Software Troubleshooting</h3>
+                    <p>Windows</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Canva</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="education" class="education">
+        <div class="section-container">
+            <h2 class="section-title">My <span>Education</span></h2>
+            <div class="education-timeline">
+                <div class="edu-item">
+                    <div class="edu-year">2022 - 2026</div>
+                    <div class="edu-content">
+                        <h3>Bachelor of Science in Information Technology</h3>
+                        <h4>University of Santo Tomas</h4>
+                        <p>Major in Web and Mobile Development</p>
+                    </div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-year">2011 - 2022</div>
+                    <div class="edu-content">
+                        <h3>High School Diploma</h3>
+                        <h4>Claret School of Quezon City </h4>
+                        <p>STEM Strand with Honors</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="experience" class="experience">
+        <div class="section-container">
+            <h2 class="section-title">My <span>Experience</span></h2>
+            <div class="experience-timeline">
+                <div class="exp-item">
+                    <div class="exp-year">January 2026 - May 2026</div>
+                    <div class="exp-content">
+                        <h3>SAP BTP Internship Bootcamp</h3>
+                        <h4>Accenture Philippines</h4>
+                        <ul>
+                            <li>Enrolled in SAP BTP Integration Bootcamp</li>
+                            <li>Built and Deployed Integration Flows using SAP Cloud Integration</li>
+                            <li>Worked with Adapters, Groovy Scripting, Message Mapping</li>
+                            <li>Did Hands On Exercises Involving ProcessDirect, Email Notification, Splitter, Router and Gather Patterns</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2 class="section-title">Contact <span>Details</span></h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>ashtonvill204@gmail.com</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Quezon City, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
