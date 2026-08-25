@@ -393,9 +393,86 @@ section {
     line-height: 1.6;
 }
 
+.acadprorjects {
+    background-color: #0b0b0b;
+}
+
+.projects-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+.projects-item {
+    display: flex;
+    gap: 3rem;
+    background: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border-left: 4px solid #ff7600;
+    transition: 0.3s ease;
+}
+
+
+.projects-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 20px rgba(255, 118, 0, 0.1);
+}
+
+
+.projects-year {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff7600;
+    min-width: 130px;
+}
+
+
+.projects-content h3 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #f0f0f0;
+}
+
+
+.projects-content h4 {
+    font-size: 1.6rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+
+.projects-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.projects-content ul li {
+    font-size: 1.4rem;
+    color: #b0b0b0;
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+
+.projects-content ul li::before {
+    content: "▸";
+    color: #ff7600;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+
 
 .experience {
-    background-color: #0b0b0b;
+    background-color: #111111;
 }
 
 
@@ -473,7 +550,7 @@ section {
 
 
 .contact {
-    background-color: #111111;
+    background-color: #0b0b0b;
 }
 
 
@@ -574,6 +651,112 @@ section {
     cursor: pointer;
 }
 
+.projects-content img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+    margin-top: 1.5rem;
+    border: 1px solid #2a2a2a;
+    display: block;
+}
+
+.projects-item {
+    display: flex;
+    gap: 3rem;
+    background: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    border-left: 4px solid #ff7600;
+    transition: 0.3s ease;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.projects-content {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+}
+
+/* Profile Image with Social Icons Underneath */
+.profimage-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.profimage-wrapper .profimage {
+    flex-shrink: 0;
+}
+
+.profimage-wrapper .profimage img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff7600;
+    box-shadow: 0 0 40px rgba(255, 118, 0, 0.25);
+    transition: 0.3s ease;
+}
+
+.profimage-wrapper .profimage img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 60px rgba(255, 118, 0, 0.4);
+}
+
+/* Social Icons Under Image */
+.profimage-wrapper .social-icons {
+    display: flex;
+    gap: 1.8rem;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.profimage-wrapper .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1e1e1e;
+    color: #f0f0f0;
+    font-size: 2.2rem;
+    transition: 0.25s ease;
+    border: 1px solid #2a2a2a;
+}
+
+.profimage-wrapper .social-icons a:hover {
+    background: #ff7600;
+    color: #0b0b0b;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255, 118, 0, 0.3);
+    border-color: #ff7600;
+}
+
+/* Hide the social icons in home-content */
+.home-content .social-icons {
+    display: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 995px) {
+    .profimage-wrapper .profimage img {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profimage-wrapper .profimage img {
+        width: 180px;
+        height: 180px;
+    }
+}
 
 @media (max-width: 995px) {
     header {
@@ -622,6 +805,7 @@ section {
     .home-content p {
         margin-left: auto;
         margin-right: auto;
+        text-align: justify;
     }
 
 
