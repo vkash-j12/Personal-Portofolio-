@@ -454,6 +454,11 @@ section {
     display: block;
 }
 
+.projects-content .parkfinder-image {
+    width: 190px;
+    max-width: 100%;
+}
+
 .experience {
     background-color: #111111;
 }
